@@ -2,8 +2,11 @@
 import Link from 'next/link'
 import { HOLIDAYS } from '../utils/holidays'
 import { DynamicIcon } from 'lucide-react/dynamic'
+import { useTheme } from './ThemeProvider'
 
 export default function Footer() {
+  const { theme } = useTheme()
+
   return (
     <footer className="bg-gray-900 text-gray-300 py-12">
       <div className="container mx-auto px-4 grid grid-cols-1 gap-8 md:grid-cols-4">
@@ -11,7 +14,7 @@ export default function Footer() {
         {/* Column 1: Logo & Social */}
         <div>
           <div className="flex items-center mb-4">
-            <img src="/logo.svg" alt="Holiday Posts" className="h-8 mr-2" />
+            <img src={theme.icon} alt={theme.name} className="inline w-8 h-8 mr-2" />
             <span className="text-xl font-bold">Holiday Posts</span>
           </div>
           <p className="text-sm">&copy; {new Date().getFullYear()} Holiday Posts. All rights reserved.</p>
