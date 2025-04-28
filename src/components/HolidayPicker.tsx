@@ -12,19 +12,27 @@ export default function HolidayPicker() {
   return (
     <div>
       <div className="flex space-x-2 mb-4 overflow-x-auto">
-        {HOLIDAYS.map(h => (
-          <button
-            key={h.slug}
-            onClick={() => setTheme(h)}
-            className={`px-4 py-2 border rounded flex-shrink-0 ${
-              theme.slug === h.slug
-                ? 'bg-blue-600 text-white'
-                : 'bg-white text-gray-800 hover:bg-gray-100'
-            }`}
-          >
-            {h.name}
-          </button>
-        ))}
+        {HOLIDAYS.map(h => {
+          const isActive = theme.slug === h.slug
+          const bgClass   = isActive ? h.colors.buttonBg : 'bg-white'
+          const txtClass  = isActive ? h.colors.buttonText : 'text-gray-800'
+          const hover     = isActive
+            ? h.colors.buttonHover
+            : 'hover:bg-gray-100'
+
+          return (
+            <button
+              key={h.slug}
+              onClick={() => setTheme(h)}
+              className={`
+                ${bgClass} ${txtClass} ${hover}
+                px-4 py-2 border rounded flex-shrink-0 transition
+              `}
+            >
+              {h.name}
+            </button>
+          )
+        })}
       </div>
 
       <div className="grid grid-cols-2 gap-4">

@@ -1,27 +1,45 @@
 export type Holiday = {
   name: string
-  slug: string           // NEW
+  slug: string
   start: { month: number; day: number }
-  colors: { bg: string; accent: string }
+  colors: {
+    bg: string         // page background
+    accent: string     // accent text / headings
+    buttonBg: string   // primary button background
+    buttonText: string // primary button text color
+    buttonHover: string// hover state for that button
+  }
   icon: string
 }
 
 export const HOLIDAYS: Holiday[] = [
   {
     name: 'Thanksgiving',
-    slug: 'thanksgiving',                   // NEW
+    slug: 'thanksgiving',
     start: { month: 11, day: 22 },
-    colors: { bg: 'bg-orange-100', accent: 'text-orange-600' },
-    icon: '/icons/turkey.svg'
+    icon: '/icons/turkey.svg',
+    colors: {
+      bg: 'bg-orange-100',
+      accent: 'text-orange-600',
+      buttonBg: 'bg-orange-600',
+      buttonText: 'text-white',
+      buttonHover: 'hover:bg-orange-700',
+    },
   },
   {
     name: 'Christmas',
-    slug: 'christmas',                      // NEW
+    slug: 'christmas',
     start: { month: 12, day: 1 },
-    colors: { bg: 'bg-green-100', accent: 'text-red-600' },
-    icon: '/icons/tree.svg'
-  }
-  // …and so on for each holiday
+    icon: '/icons/tree.svg',
+    colors: {
+      bg: 'bg-green-50',
+      accent: 'text-red-600',
+      buttonBg: 'bg-red-600',
+      buttonText: 'text-white',
+      buttonHover: 'hover:bg-red-700',
+    },
+  },
+  // …add more holidays with their own button styles
 ]
 
 export function getCurrentHoliday(): Holiday {

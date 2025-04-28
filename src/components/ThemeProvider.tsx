@@ -1,3 +1,4 @@
+// src/components/ThemeProvider.tsx
 import React, { createContext, useContext, useState, ReactNode } from 'react'
 import { getCurrentHoliday, Holiday } from '../utils/holidays'
 
@@ -6,27 +7,30 @@ type ThemeContextType = {
   setTheme: (h: Holiday) => void
 }
 
-// Create context with no default value
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
 export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [theme, setTheme] = useState<Holiday>(getCurrentHoliday())
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
-      {/* apply theme colors/icons here */}
-      <div className={`${theme.colors.bg} min-h-screen`}>
+    // ← Apply both the bg and (optional) accent text color here
+    <div
+      className={`
+        ${theme.colors.bg}
+        ${theme.colors.accent}
+        min-h-screen
+        transition-colors duration-300
+      `}
+    >
+      <ThemeContext.Provider value={{ theme, setTheme }}>
         {children}
-      </div>
-    </ThemeContext.Provider>
+      </ThemeContext.Provider>
+    </div>
   )
 }
 
-// Custom hook that ensures context is not undefined
-export function useTheme(): ThemeContextType {
+export function useTheme() {
   const ctx = useContext(ThemeContext)
-  if (!ctx) {
-    throw new Error('useTheme must be used within a ThemeProvider')
-  }
+  if (!ctx) throw new Error('useTheme must be used within a ThemeProvider')
   return ctx
 }
