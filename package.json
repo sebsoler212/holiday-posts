@@ -8,12 +8,14 @@
     "start": "next start"
   },
   "dependencies": {
+    "@lucide/lab": "^0.1.2",
     "@stripe/stripe-js": "^1.42.0",
     "@types/node": "20.6.0",
     "@types/react": "18.0.38",
     "@uploadcare/react-widget": "^2.4.7",
     "autoprefixer": "^10.4.14",
     "keen-slider": "^6.8.6",
+    "lucide-react": "^0.503.0",
     "next": "^15.3.1",
     "postcss": "^8.4.27",
     "react": "18.2.0",
