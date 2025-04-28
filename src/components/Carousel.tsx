@@ -4,20 +4,20 @@ import { useTheme } from './ThemeProvider'
 import { useEffect, useState } from 'react'
 
 export default function Carousel() {
-  const [sliderRef] = useKeenSlider<HTMLDivElement>({ loop: true, slides: { perView: 1 } })
-  const { name } = useTheme()
+  const [sliderRef] = useKeenSlider<HTMLDivElement>({ loop: true })
+  const { theme } = useTheme()
   const [images, setImages] = useState<string[]>([])
 
   useEffect(() => {
-    // assuming public/examples/{holiday}/{1..4}.jpg
-    setImages([1, 2, 3, 4].map(n => `/examples/${name.toLowerCase()}/${n}.jpg`))
-  }, [name])
+    const slug = theme.slug   // now safe
+    setImages([1, 2, 3, 4].map(n => `/examples/${slug}/${n}.jpg`))
+  }, [theme])
 
   return (
-    <div ref={sliderRef} className='keen-slider'>
+    <div ref={sliderRef} className="keen-slider">
       {images.map((src, idx) => (
-        <div key={idx} className='keen-slider__slide'>
-          <img src={src} alt={`${name} example ${idx + 1}`} />
+        <div key={idx} className="keen-slider__slide">
+          <img src={src} alt={`${theme.name} example ${idx + 1}`} className="w-full" />
         </div>
       ))}
     </div>
