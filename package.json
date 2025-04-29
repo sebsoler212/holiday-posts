@@ -12,6 +12,7 @@
     "@stripe/stripe-js": "^1.42.0",
     "@types/node": "20.6.0",
     "@types/react": "18.0.38",
+    "@uploadcare/react-uploader": "^1.7.1",
     "@uploadcare/react-widget": "^2.4.7",
     "autoprefixer": "^10.4.14",
     "keen-slider": "^6.8.6",
