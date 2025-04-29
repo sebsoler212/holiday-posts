@@ -32,7 +32,7 @@ export const HOLIDAYS: Holiday[] = [
     start: { month: 12, day: 1 },
     icon: '/icons/tree.svg',
     colors: {
-      bg: 'bg-green-50',
+      bg: 'bg-green-200',
       accent: 'text-red-600',
       buttonBg: 'bg-red-600',
       buttonText: 'text-white',

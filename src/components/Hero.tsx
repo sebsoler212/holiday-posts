@@ -36,7 +36,7 @@ export default function Hero() {
   if (step === 0) {
     return (
       <div className="bg-white rounded-xl shadow p-8 max-w-md mx-auto text-center">
-        <h2 className="text-2xl font-bold mb-4">Turn your photos into festive holiday magic!</h2>
+        <h2 className={`${theme.colors.accent} text-2xl font-bold mb-4`}>Turn your photos into festive holiday magic!</h2>
         <div className="flex items-center justify-center space-x-4 mb-6">
           <img src="https://via.placeholder.com/150" alt="Before" className="rounded shadow"/>
           <div className="text-2xl font-bold">→</div>
@@ -67,7 +67,9 @@ export default function Hero() {
             }`}>
               {i+1}
             </div>
-            <span className={`text-xs ${step === i+1 ? theme.colors.accent : 'text-gray-600'}`}>
+            <span
+              className={`text-xs ${step === i+1 ? theme.colors.accent : 'text-gray-600'}`}
+            >
               {label}
             </span>
           </div>
@@ -111,7 +113,13 @@ export default function Hero() {
           </div>
           <button
             onClick={() => setStep(1)}
-            className={`px-4 py-2 rounded border ${theme.colors.accent} hover:opacity-80 transition`}
+            className={`
+              px-4 py-2 border rounded
+              ${theme.colors.buttonBg}
+              ${theme.colors.buttonText}
+              ${theme.colors.buttonHover}
+              transition
+            `}
           >
             ← Back
           </button>
@@ -131,7 +139,13 @@ export default function Hero() {
           <div className="flex justify-between">
             <button
               onClick={() => setStep(2)}
-              className={`px-4 py-2 rounded border ${theme.colors.accent} hover:opacity-80 transition`}
+              className={`
+                px-4 py-2 border rounded
+                ${theme.colors.buttonBg}
+                ${theme.colors.buttonText}
+                ${theme.colors.buttonHover}
+                transition
+              `}
             >
               ← Back
             </button>

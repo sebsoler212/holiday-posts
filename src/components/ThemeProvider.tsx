@@ -13,15 +13,7 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
   const [theme, setTheme] = useState<Holiday>(getCurrentHoliday())
 
   return (
-    // ← Apply both the bg and (optional) accent text color here
-    <div
-      className={`
-        ${theme.colors.bg}
-        ${theme.colors.accent}
-        min-h-screen
-        transition-colors duration-300
-      `}
-    >
+    <div className={`${theme.colors.bg} min-h-screen transition-colors duration-300`}>
       <ThemeContext.Provider value={{ theme, setTheme }}>
         {children}
       </ThemeContext.Provider>
