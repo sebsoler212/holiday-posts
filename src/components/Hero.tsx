@@ -16,11 +16,17 @@ export default function Hero() {
   const [holiday, setHoliday] = useState<string>("")
   const [email, setEmail] = useState<string>("")
 
-  const steps = ["Upload Photo", "Select Holiday", "Enter Email"]
+  const steps = ["Upload", "Select Holiday", "Email"]
   const activeCircle = `${theme.colors.buttonBg} ${theme.colors.buttonText}`
   const inactiveCircle = "bg-gray-200 text-gray-600"
 
   const handleCheckout = async () => {
+
+    console.log(email);
+    console.log(imageUrl);
+    console.log(holiday);
+
+    /*
     const stripe = await stripePromise
     await stripe!.redirectToCheckout({
       lineItems: [{ price: "YOUR_PRICE_ID", quantity: 1 }],
@@ -30,6 +36,7 @@ export default function Hero() {
       customerEmail: email,
       clientReferenceId: JSON.stringify({ imageUrl, holiday }),
     })
+    */
   }
 
   // Intro screen (step 0)
@@ -109,12 +116,6 @@ export default function Hero() {
             }}
             className="fileUploaderWrapper mb-4"
           />
-          <button
-            onClick={() => setStep(0)}
-            className={`mt-2 text-sm ${theme.colors.accent} hover:underline transition`}
-          >
-            ← Back
-          </button>
         </div>
 
         {/* Step 2: Holiday Picker */}
@@ -192,7 +193,7 @@ export default function Hero() {
                   px-4 py-2 rounded disabled:opacity-50 transition
                 `}
               >
-                Generate &amp; Pay
+                Get My Content
               </button>
             </div>
           </div>
