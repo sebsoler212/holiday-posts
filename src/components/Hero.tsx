@@ -6,6 +6,7 @@ import { loadStripe } from "@stripe/stripe-js"
 import { FileUploaderInline } from "@uploadcare/react-uploader"
 import { useTheme } from "./ThemeProvider"
 import { HOLIDAYS } from "../utils/holidays"
+import { MdOutlineFileUpload } from "react-icons/md"
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_KEY!)
 
@@ -117,7 +118,13 @@ export default function Hero() {
               }
             }}
           />
-          <p className="text-center">or click to upload</p>
+          <p className="text-center">
+            <span className="inline-flex items-center space-x-1 whitespace-nowrap">
+              <span className="pl-[15px]">or click</span>
+              <MdOutlineFileUpload className="inline-block align-middle text-2xl" />
+              <span>to upload</span>
+            </span>
+          </p>
         </div>
 
         {/* Step 2: Holiday Picker */}
