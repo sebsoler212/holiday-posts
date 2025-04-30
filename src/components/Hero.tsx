@@ -76,7 +76,7 @@ export default function Hero() {
 
   // Steps 1–3 wizard (fixed height container)
   return (
-    <div className="relative bg-white rounded-xl shadow max-w-md mx-auto h-[500px]">
+    <div className="relative bg-white rounded-xl shadow max-w-lg mx-auto h-[360px]">
       {/* Step Bar Header (fixed height) */}
       <div className="h-16 p-4 flex justify-between items-center bg-white border-b z-40">
         {steps.map((label, i) => (
@@ -105,6 +105,8 @@ export default function Hero() {
         >
           <FileUploaderInline
             pubkey={process.env.NEXT_PUBLIC_UPLOADCARE_PUBLIC_KEY!}
+            classNameUploader="uc-light"
+            className="fileUploaderWrapper"
             imgOnly
             data-images-only
             multiple={false}
@@ -114,8 +116,8 @@ export default function Hero() {
                 setStep(2)
               }
             }}
-            className="fileUploaderWrapper mb-4"
           />
+          <p className="text-center">or click to upload</p>
         </div>
 
         {/* Step 2: Holiday Picker */}

@@ -3,3 +3,11 @@
 @tailwind utilities;
 
 /* add any global overrides here */
+
+.fileUploaderWrapper uc-source-list {
+    display: none !important;
+}
+
+.fileUploaderWrapper uc-copyright {
+    display: none !important;
+}
