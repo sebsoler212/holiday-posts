@@ -43,9 +43,9 @@ export default function Hero() {
   // Intro screen (step 0)
   if (step === 0) {
     return (
-      <div className="bg-white rounded-xl shadow p-8 max-w-md mx-auto text-center">
+      <div className="bg-white rounded-xl shadow p-8 max-w-lg mx-auto text-center h-[350px]">
         <h2 className={`${theme.colors.accent} text-2xl font-bold mb-4`}>
-          Turn your photos into festive holiday magic!
+          Get your Holiday Posts in 3 easy steps
         </h2>
         <div className="flex items-center justify-center space-x-4 mb-6">
           <img
@@ -66,7 +66,7 @@ export default function Hero() {
             ${theme.colors.buttonBg}
             ${theme.colors.buttonText}
             ${theme.colors.buttonHover}
-            px-6 py-3 rounded-lg transition
+            px-6 py-3 rounded-lg transition w-full
           `}
         >
           Try it now!
@@ -77,7 +77,7 @@ export default function Hero() {
 
   // Steps 1–3 wizard (fixed height container)
   return (
-    <div className="relative bg-white rounded-xl shadow max-w-lg mx-auto h-[360px]">
+    <div className="relative bg-white rounded-xl shadow max-w-lg mx-auto h-[350px]">
       {/* Step Bar Header (fixed height) */}
       <div className="h-16 p-4 flex justify-between items-center bg-white border-b z-40">
         {steps.map((label, i) => (
