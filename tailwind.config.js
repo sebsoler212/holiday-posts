@@ -12,6 +12,8 @@ module.exports = {
       'bg-red-600',
       'hover:bg-orange-700',
       'hover:bg-red-700',
+      'hover:bg-orange-600',
+      'hover:bg-red-600',
       'text-white',
       // …and any other theme classes you defined
     ],

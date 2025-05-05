@@ -49,15 +49,19 @@ export default function Hero() {
         </h2>
         <div className="flex items-center justify-center space-x-4 mb-6">
           <img
-            src="https://via.placeholder.com/150?text=Original"
+            src="https://ucarecdn.com/56fd91bb-2d36-411c-84d2-70711cbe0d0b/Screenshot20250505at30641PM.png"
             alt="Before"
             className="rounded shadow"
+            height="140"
+            width="140"
           />
           <div className="text-2xl font-bold">→</div>
           <img
-            src="https://via.placeholder.com/150?text=Holiday"
+            src="https://ucarecdn.com/bae25942-c405-48a7-a7a5-935f6fc2e419/ChatGPTImageMay5202503_20_21PM.png"
             alt="After"
             className="rounded shadow"
+            height="140"
+            width="140"
           />
         </div>
         <button

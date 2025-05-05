@@ -31,11 +31,11 @@ export default function HolidayPicker() {
       </div>
 
       {/* Example grid */}
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         {[1,2,3,4].map(i => (
           <img
             key={i}
-            src={`/examples/${theme.slug}/${i}.jpg`}
+            src={`/examples/${theme.slug}/${i}.png`}
             alt={`${theme.name} ${i}`}
             className="w-full rounded"
           />

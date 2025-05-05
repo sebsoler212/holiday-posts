@@ -8,6 +8,7 @@ export type Holiday = {
     buttonBg: string   // primary button background
     buttonText: string // primary button text color
     buttonHover: string// hover state for that button
+    faqHover: string
   }
   icon: string
 }
@@ -24,6 +25,7 @@ export const HOLIDAYS: Holiday[] = [
       buttonBg: 'bg-orange-600',
       buttonText: 'text-white',
       buttonHover: 'hover:bg-orange-700',
+      faqHover: 'hover:bg-orange-600'
     },
   },
   {
@@ -37,6 +39,7 @@ export const HOLIDAYS: Holiday[] = [
       buttonBg: 'bg-red-600',
       buttonText: 'text-white',
       buttonHover: 'hover:bg-red-700',
+      faqHover: 'hover:bg-red-600'
     },
   },
   // …add more holidays with their own button styles

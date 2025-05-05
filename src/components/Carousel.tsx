@@ -10,7 +10,7 @@ export default function Carousel() {
 
   useEffect(() => {
     const slug = theme.slug   // now safe
-    setImages([1, 2, 3, 4].map(n => `/examples/${slug}/${n}.jpg`))
+    setImages([1, 2, 3, 4].map(n => `/examples/${slug}/${n}.png`))
   }, [theme])
 
   return (

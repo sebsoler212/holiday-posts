@@ -2,7 +2,6 @@ import { ThemeProvider } from '../components/ThemeProvider'
 import ThemeBanner from '../components/ThemeBanner'
 import Intro from '../components/Intro'
 import Hero from '../components/Hero'
-import Carousel from '../components/Carousel'
 import HolidayPicker from '../components/HolidayPicker'
 import ReviewsWall from '../components/ReviewsWall'
 import Faq from '../components/Faq'
@@ -24,7 +23,6 @@ export default function Home() {
           </div>
         </div>
 
-        <Carousel />
         <HolidayPicker />
         <ReviewsWall />
         <Faq />

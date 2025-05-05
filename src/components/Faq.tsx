@@ -1,5 +1,6 @@
 // src/components/FAQ.tsx
 import { useState } from 'react'
+import { useTheme } from "./ThemeProvider"
 
 const FAQ_ITEMS = [
   {
@@ -25,6 +26,7 @@ const FAQ_ITEMS = [
 ]
 
 export default function FAQ() {
+  const { theme } = useTheme()
   const [openIndex, setOpenIndex] = useState<number | null>(null)
   const toggle = (i: number) => setOpenIndex(openIndex === i ? null : i)
 
@@ -36,7 +38,7 @@ export default function FAQ() {
           <div key={i} className="border rounded overflow-hidden">
             <button
               onClick={() => toggle(i)}
-              className="w-full text-left px-4 py-3 flex justify-between items-center bg-gray-100 hover:bg-gray-200"
+              className={` w-full text-left px-4 py-3 flex justify-between items-center bg-white ${theme.colors.faqHover} `}
             >
               <span className="font-medium">{item.question}</span>
               <svg
