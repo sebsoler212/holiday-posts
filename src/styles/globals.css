@@ -23,4 +23,78 @@
         "SPAC" 0;
 }
   
+
+.holiday-cheer {
+    font-family: "Shantell Sans", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+        "BNCE" 0,
+        "INFM" 0,
+        "SPAC" 0;
+    
+    padding-bottom:8px;
+    /* gradient colors: red → gold → green → teal */
+    background: linear-gradient(
+      90deg,
+      #d12a2a,  /* candy-apple red */
+      #f9a825,  /* golden yellow */
+      #2e7d32,  /* pine green */
+      #00897b   /* teal accent */
+    );
+    background-size: 400% 400%;
+    color: transparent;
+    -webkit-background-clip: text;
+            background-clip: text;
+    position: relative;
+    /* animate the gradient sliding + a soft glow */
+    animation:
+      gradient-shift 6s ease infinite,
+      glow-pulse     2.5s ease-in-out infinite alternate;
+  }
   
+  @keyframes gradient-shift {
+    0%   { background-position:   0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position:   0% 50%; }
+  }
+  
+  @keyframes glow-pulse {
+    from {
+      text-shadow:
+        0 0 5px rgba(255,255,255,0.6),
+        0 0 10px rgba(249,168,37,0.5);
+    }
+    to {
+      text-shadow:
+        0 0 15px rgba(255,255,255,0.8),
+        0 0 25px rgba(249,168,37,0.8);
+    }
+  }
+  
+  /* ✨ Tiny sparkles using pseudo-elements */
+  .holiday-cheer::before,
+  .holiday-cheer::after {
+    content: '✨';
+    position: absolute;
+    font-size: 1.5rem;
+    opacity: 0;
+    animation: sparkle 3s linear infinite;
+  }
+  
+  .holiday-cheer::before {
+    top: -0.5em;
+    left: 20%;
+    animation-delay: 0s;
+  }
+  .holiday-cheer::after {
+    bottom: -0.3em;
+    right: 15%;
+    animation-delay: 1.5s;
+  }
+  
+  @keyframes sparkle {
+    0%, 100% { opacity: 0; transform: scale(0.5) rotate(45deg); }
+    50%      { opacity: 1; transform: scale(1)   rotate(0deg); }
+  }
