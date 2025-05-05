@@ -7,7 +7,7 @@ export default function Intro() {
         <div className="">
             <h1 className="text-center text-3xl lg:text-6xl lg:px-8">Turn Your Photos Into</h1>
             <h1 className="text-center text-3xl lg:text-6xl">Holiday Cheer</h1>
-            <ul className="text-sm pt-4 lg:pt-6 text-center lg:text-left lg:pl-16">
+            <ul className="text-sm pt-4 lg:pt-6 text-center">
                 <li>
                     <span className="inline-flex items-center space-x-1 whitespace-nowrap">
                         <TiSocialInstagram className="inline-block align-middle text-xl" />
