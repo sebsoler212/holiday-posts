@@ -10,9 +10,13 @@ import { MdOutlineFileUpload } from "react-icons/md"
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_KEY!)
 
-export default function Hero() {
+interface HeroProps {
+  step: number
+  setStep: (step: number) => void
+}
+
+export default function Hero({ step, setStep }: HeroProps) {
   const { theme } = useTheme()
-  const [step, setStep] = useState(0)
   const [imageUrl, setImageUrl] = useState<string | null>(null)
   const [holiday, setHoliday] = useState<string>("")
   const [email, setEmail] = useState<string>("")
