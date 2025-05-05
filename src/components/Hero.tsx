@@ -196,7 +196,7 @@ export default function Hero({ step, setStep }: HeroProps) {
             <div className="flex justify-between">
               <button
                 onClick={() => setStep(2)}
-                className={`px-4 py-2 rounded border ${theme.colors.accent} hover:underline transition`}
+                className={` text-sm ${theme.colors.accent} hover:underline transition`}
               >
                 ← Back
               </button>
