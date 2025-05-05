@@ -4,16 +4,10 @@ import { BiSolidHappyHeartEyes } from "react-icons/bi";
 
 export default function Intro() {
     return (
-        <div className="px-8">
-            <h1 className="text-center text-2xl lg:text-6xl lg:px-8">Turn Your Photos Into</h1>
-            <h1 className="text-center text-2xl lg:text-6xl">Holiday Cheer</h1>
-            <ul className="text-sm pt-4 text-center lg:text-left">
-                <li>
-                    <span className="inline-flex items-center space-x-1 whitespace-nowrap">
-                        <BiSolidHappyHeartEyes className="inline-block align-middle text-xl" />
-                        <span>Easiest way to spread holiday cheer!</span>
-                    </span>
-                </li>
+        <div className="">
+            <h1 className="text-center text-3xl lg:text-6xl lg:px-8">Turn Your Photos Into</h1>
+            <h1 className="text-center text-3xl lg:text-6xl">Holiday Cheer</h1>
+            <ul className="text-sm pt-4 lg:pt-6 text-center lg:text-left lg:pl-16">
                 <li>
                     <span className="inline-flex items-center space-x-1 whitespace-nowrap">
                         <TiSocialInstagram className="inline-block align-middle text-xl" />

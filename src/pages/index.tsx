@@ -12,10 +12,10 @@ export default function Home() {
   return (
     <ThemeProvider>
       <ThemeBanner />
-      <main className='container space-y-12 py-8 px-4 max-w-6xl mx-auto original-surfer-regular'>
+      <main className='container space-y-12 py-4 px-4 max-w-6xl mx-auto shantell-sans-holiday'>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
-          <div className="bg-gray-100 p-4">
+          <div className="pb-4">
             <Intro />
           </div>
 

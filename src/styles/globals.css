@@ -12,10 +12,15 @@
     display: none !important;
 }
 
-.original-surfer-regular {
-    font-family: "Original Surfer", sans-serif;
-    font-weight: 400;
+.shantell-sans-holiday {
+    font-family: "Shantell Sans", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
     font-style: normal;
-  }
+    font-variation-settings:
+        "BNCE" 0,
+        "INFM" 0,
+        "SPAC" 0;
+}
   
   

@@ -14,10 +14,7 @@ export default class MyDocument extends Document {
             crossOrigin="anonymous"
           />
           {/* Import the Original Surfer font */}
-          <link
-            href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap"
-            rel="stylesheet"
-          />
+          <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
         </Head>
         <body>
           <Main />

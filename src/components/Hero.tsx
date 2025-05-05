@@ -44,7 +44,7 @@ export default function Hero() {
   if (step === 0) {
     return (
       <div className="bg-white rounded-xl shadow p-8 max-w-lg mx-auto text-center h-[350px]">
-        <h2 className={`${theme.colors.accent} text-2xl font-bold mb-4`}>
+        <h2 className={`${theme.colors.accent} text-2xl font-bold mb-4 lg:px-14`}>
           Get your Holiday Posts in 3 easy steps
         </h2>
         <div className="flex items-center justify-center space-x-4 mb-6">
