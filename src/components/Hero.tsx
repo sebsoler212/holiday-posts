@@ -47,7 +47,7 @@ export default function Hero({ step, setStep }: HeroProps) {
   // Intro screen (step 0)
   if (step === 0) {
     return (
-      <div className="bg-white rounded-xl shadow p-8 max-w-lg mx-auto text-center h-[350px]">
+      <div className="bg-white rounded-xl shadow py-4 px-8 max-w-lg mx-auto text-center h-[350px]">
         <h2 className={`${theme.colors.accent} text-2xl font-bold mb-4 lg:px-14`}>
           Get your Holiday Posts in 3 easy steps
         </h2>
