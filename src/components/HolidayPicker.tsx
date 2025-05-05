@@ -24,6 +24,7 @@ export default function HolidayPicker() {
                 px-4 py-2 border rounded flex-shrink-0 transition
               `}
             >
+              <img src={h.icon} alt={h.name} className="inline w-6 h-6 mr-2" />
               {h.name}
             </button>
           )
