@@ -41,12 +41,7 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/careers" className="hover:text-white">
-                Careers
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact" className="hover:text-white">
+              <Link href="/support" className="hover:text-white">
                 Contact
               </Link>
             </li>
@@ -72,13 +67,13 @@ export default function Footer() {
           <h4 className="text-lg font-semibold mb-2">Legal</h4>
           <ul className="space-y-1 text-sm">
             <li>
-              <Link href="/refund-policy" className="hover:text-white">
-                Refund Policy
+              <Link href="/support" className="hover:text-white">
+                Support
               </Link>
             </li>
             <li>
               <Link href="/terms" className="hover:text-white">
-                Terms &amp; Conditions
+                Terms of Service
               </Link>
             </li>
             <li>
