@@ -41,9 +41,9 @@ export async function POST(request: Request) {
       .insert(
         {
           id: uuidv4(),
-          uc_uuid: session.client_reference_id,
-          email: session.customer_details?.email,
-          promo_code: session.discounts?.[0]?.promotion_code,
+          uc_uuid: session.client_reference_id, //UC UUID Photo Used
+          email: session.customer_details?.email, //Email Address
+          promo_code: session.discounts?.[0]?.promotion_code, //Promotion Code API ID
           status: 'pending',
           created_at: new Date()
         }
