@@ -2,13 +2,10 @@
 "use client"
 
 import React, { useState } from "react"
-import { loadStripe } from "@stripe/stripe-js"
 import { FileUploaderInline } from "@uploadcare/react-uploader"
 import { useTheme } from "./ThemeProvider"
 import { HOLIDAYS } from "../utils/holidays"
 import { MdOutlineFileUpload } from "react-icons/md"
-
-const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_KEY!)
 
 interface HeroProps {
   step: number
@@ -27,22 +24,10 @@ export default function Hero({ step, setStep }: HeroProps) {
 
   const handleCheckout = async () => {
 
-    console.log(email);
-    console.log(imageUrl);
-    console.log(holiday);
+    let paymentLink = "https://buy.stripe.com/fZu14n5Fw0Op0cx56l2Ji00?prefilled_promo_code=" + holiday + "&client_reference_id=" + imageUrl?.split('/')[3] + "&prefilled_email=" + encodeURIComponent(email);
+    window.location.href = paymentLink;
 
-    /*
-    const stripe = await stripePromise
-    await stripe!.redirectToCheckout({
-      lineItems: [{ price: "YOUR_PRICE_ID", quantity: 1 }],
-      mode: "payment",
-      successUrl: `${window.location.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancelUrl: window.location.href,
-      customerEmail: email,
-      clientReferenceId: JSON.stringify({ imageUrl, holiday }),
-    })
-    */
-  }
+  } // end handleChekcout
 
   // Intro screen (step 0)
   if (step === 0) {
